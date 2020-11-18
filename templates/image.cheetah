@@ -1,0 +1,4 @@
+\begin{center}\label{img:$label}
+\includegraphics[width=\maxwidth{\textwidth}]{$file_name}
+\captionof{figure}{$caption}
+\end{center}

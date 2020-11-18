@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+\usepackage{caption}
+#if $hasindex == True
+\usepackage{makeidx}
+\makeindex
+#end if
+\title{Lab Notes $date1-$date2}
+\author{Graduate Student}
+
+\makeatletter
+\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
+\makeatother
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+$body
+
+#if $hasindex == True
+\printindex
+#end if
+\end{document}

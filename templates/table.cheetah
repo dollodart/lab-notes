@@ -1,0 +1,8 @@
+\begin{center}\label{tab:$label}
+\centering
+#if $footnotesize
+\footnotesize
+#end if
+$table
+\captionof{table}{$caption}
+\end{center}
