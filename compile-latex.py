@@ -9,10 +9,7 @@ from utils.env import HOME, LABNOTES, SUMMARIES, TEMPLATES
 from utils.date_iter import date_iter, date1, date2
 
 # spreadsheet data from summaries
-wb = load_workbook('summaries/record.xlsx')
-ws1 = wb['Sheet1']
-data = [row for row in ws1.values]
-df = pd.DataFrame(data[1:], columns=data[0])
+df = pd.read_excel(f'{SUMMARIES}/record.xlsx')
 df = df[df.columns[~df.columns.isna()]]
 df['Date Start'] = pd.to_datetime(df['Date Start'])
 
