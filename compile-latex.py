@@ -49,13 +49,13 @@ for d in date_iter:
     # time matching the summary files with the given date for spreadsheets
     check = df['Date Start'] == d
     if check.any():
-        document += '\\subsection{Cross-Reference}'
+        document += f'\\subsection{{Cross-Reference}}\label{{cref:{d}}}'
         document += '\n\n{\\footnotesize\n' + df[check].to_latex() + '}'
     # time matching dictionary
     check = df2['Date Start'] == d
     if check.any():
         s = df2[check]
-        document += '\\subsection{Cross-Reference}'
+        document += f'\\subsection{{Cross-Reference}}\label{{cref:{d}}}'
         document += '\n\n{\\footnotesize\n' + df2[check].to_latex() + '}'
 
     # writing tables, images, and special data files
