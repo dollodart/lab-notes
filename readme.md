@@ -128,7 +128,11 @@ thesis, an OpenStax textbook *Biology* is used as the testing set).
 while preserving formatting when updating excel files
 - Call excel VBA to export to csv and read csv with Python. This is the
 fastest way to read excel files, even though there is an ISO standard
-for the xlsx format.
+for the xlsx format. Difficult to develop outside a windows environment.
+- Expose utilities through a CLI, also allow the date range to be
+specified outside of the date iterator utility. This is because you
+often want to search in date ranges not the same as the ones you compile
+to.
 
 Please raise an issue or e-mail me at davidollodart*at*gmail.com if you
 have a suggestion or use case you would like developed.
